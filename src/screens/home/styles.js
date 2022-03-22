@@ -10,5 +10,7 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         marginVertical: 10,
+        fontFamily: 'Rubik-Regular',
+        color: '#212121',
     },
 })
