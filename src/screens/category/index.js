@@ -1,11 +1,28 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import { styles } from './styles';
+import {View, FlatList} from 'react-native';
+import {styles} from './styles';
+import {products} from '../../constants/products';
+import CategoryProducts from '../../components/molecules/categoryProducts';
 
-const Category = () => {
+const Category = ({navigation, route}) => {
+  const {id} = route.params;
+  const selectedCategory = products.filter(product => product.category === id);
+
+  const handleSelectCategory = product => {
+    navigation.navigate('Product', {product, name: product.name});
+  };
+
+  const renderItem = ({item}) => (
+    <CategoryProducts item={item} onSelected={handleSelectCategory} />
+  );
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Category Screen</Text>
+      <FlatList
+        data={selectedCategory}
+        keyExtractor={item => item.id}
+        renderItem={renderItem}
+      />
     </View>
   );
 };

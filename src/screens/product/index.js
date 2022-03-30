@@ -1,11 +1,21 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import { styles } from './styles';
+import {View, Text, Button, Image, TouchableOpacity} from 'react-native';
+import {styles} from './styles';
 
-const Product = () => {
+const Product = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Product Screen</Text>
+      <Text style={styles.title}>Chipa</Text>
+      <Text style={styles.price}>$20</Text>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Home');
+        }}>
+        <Image
+          style={styles.productsImg}
+          source={require('../../../assets/images/chipa.jpg')}
+        />
+      </TouchableOpacity>
     </View>
   );
 };

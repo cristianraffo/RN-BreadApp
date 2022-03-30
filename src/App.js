@@ -1,12 +1,8 @@
 import React from 'react';
-import {SafeAreaView, View, Text} from 'react-native';
-
-import Home from './screens/home';
+import AppNavigation from './navigation/index';
 
 const App = () => {
-  return (
-      <Home />
-  );
+  return <AppNavigation />;
 };
 
 export default App;
