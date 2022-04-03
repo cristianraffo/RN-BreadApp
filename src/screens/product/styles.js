@@ -8,16 +8,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    title: {
-        fontSize: 20,
-        textAlign: 'center',
-        marginVertical: 10,
-    },
-    productsImg: {
-        width: width / 1.5,
-        height: height * 0.2
-    },
-    price: {
+    text: {
         fontSize: 16,
-    }
+        textAlign: 'center',
+        marginVertical: 20,
+    },
 })

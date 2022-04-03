@@ -1,21 +1,19 @@
 import React from 'react';
-import {View, Text, Button, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Button} from 'react-native';
 import {styles} from './styles';
+import {colors} from '../../constants/themes';
 
-const Product = ({navigation}) => {
+const Product = ({navigation, route}) => {
+  const {product} = route.params;
+  const {name, description, price, weight} = product;
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Chipa</Text>
-      <Text style={styles.price}>$20</Text>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Home');
-        }}>
-        <Image
-          style={styles.productsImg}
-          source={require('../../../assets/images/chipa.jpg')}
-        />
-      </TouchableOpacity>
+      <Text style={styles.text}>{name}</Text>
+      <Text style={styles.text}>{description}</Text>
+      <Text style={styles.text}>price: ${price}</Text>
+      <Text style={styles.text}>weight: {weight}</Text>
+      <Button title="Add" onPress={() => null} color={colors.primaryColor} />
     </View>
   );
 };
