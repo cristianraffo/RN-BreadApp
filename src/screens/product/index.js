@@ -2,9 +2,10 @@ import React from 'react';
 import {View, Text, Button} from 'react-native';
 import {styles} from './styles';
 import {colors} from '../../constants/themes';
+import {useSelector, connect} from 'react-redux';
 
 const Product = ({navigation, route}) => {
-  const {product} = route.params;
+  const product = useSelector(state => state.products.selectedProduct);
   const {name, description, price, weight} = product;
 
   return (
