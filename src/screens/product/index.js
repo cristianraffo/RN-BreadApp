@@ -14,9 +14,9 @@ const Product = ({navigation, route}) => {
       <Text style={styles.text}>{description}</Text>
       <Text style={styles.text}>price: ${price}</Text>
       <Text style={styles.text}>weight: {weight}</Text>
-      <Button title="Add" onPress={() => null} color={colors.primaryColor} />
+      <Button title="Buy" onPress={() => null} color={colors.primaryColor} />
     </View>
   );
 };
 
-export default Product;
+export default connect()(Product);
