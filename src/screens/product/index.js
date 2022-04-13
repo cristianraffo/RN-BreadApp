@@ -20,7 +20,6 @@ const Product = ({navigation, route}) => {
       <Text style={styles.text}>weight: {weight}</Text>
       <Button title="Buy" onPress={() => handleAddItem()} color={colors.primaryColor} />
       <View style={styles.cartButton}>
-      <Button title="Cart" onPress={() => navigation.navigate('Cart')} color='#212121' />
       </View>
     </View>
   );

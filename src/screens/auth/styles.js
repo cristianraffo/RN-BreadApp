@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     },
     formTitle: {
         fontSize: 20,
-        fontweight: 'bold',
+        fontWeight: 'bold',
         marginBottom: 20,
     },
     formContainer: {
@@ -33,12 +33,12 @@ export const styles = StyleSheet.create({
     label: {
         fontSize: 13,
         marginBottom: 5,
-        fontweight: 'bold',
+        fontWeight: 'bold',
     },
     linkText: {
         color: colors.primaryColor,
         fontSize: 16,
-        fontweight: 'bold',
+        fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
     }
