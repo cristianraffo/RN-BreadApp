@@ -1,1 +1,1 @@
-export const URL_API = '';
+export const URL_API = 'https://breadapp-a9253-default-rtdb.firebaseio.com/';
